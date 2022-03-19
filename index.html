@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicLand</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/logo.svg" />
+    <link rel="stylesheet" href="./assets/style/reset-style.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="currentColor"
+            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+          </path>
+        </svg>
+      </div>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <a href="#"><img class="logo" src="./assets/logo.svg" alt="logo" width="25%"></a>
+            <h1>Добро пожаловать MusicLand</h1>
+            <div class="burger-menu">
+                <div class="burger-container">
+                    <img src="./assets/burger_part.svg" alt="---">
+                    <img src="./assets/burger_part.svg" alt="---">
+                    <img src="./assets/burger_part.svg" alt="---">
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            
+            <h2 id="albums">Интересные альбомы:</h2>
+            <div class="track-list-cont">
+                <h4>Список треков альбома:</h4>
+                <ol class="track-list">
+                   
+                </ol>
+            </div>
+            <div class="music-playlists">
+                <h3>Не пропусти топовые альбомы жанра рок</h3>
+                <div class="playlists-rock-cont playlist-cont">
+                    <!-- Шаблоны альбомов, используются, если лимит запросов исчерпан -->
+                    <!-- TEST -->
+                    <!-- <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>    
+
+                    <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>    
+
+                    <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>    
+
+                    <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>  -->
+                       <!-- TEST -->
+                </div>
+            </div>
+            <div class="music-playlists">
+                
+                <h3>Тем, кому нравится репчик</h3>
+                <div class="playlists-rap-cont">
+                    <!-- Шаблоны альбомов, используются, если лимит запросов исчерпан -->
+                    <!-- TEST -->
+                    <!-- <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>    
+
+                    <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>    
+
+                    <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>    
+
+                    <div class="playlist">
+                        <img class="album-cover" src="./assets/test.jfif" alt="">
+                        <p class="album-name">Playlist</p>
+                        <p class="artist-name">Artist name</p>
+                    </div>  -->
+                       <!-- TEST -->
+                       
+                </div>
+            </div>
+            <div class="introdaction">
+                <div class="introdaction-cont">
+                <h3>Поздравляю, вы дошли до конца сайта</h3>
+                <p>Можете посмотреть на мемы:</p>
+            </div>
+                <div class="random-image-cont">
+                    <img src="./assets/random-placeholder.jpg" alt="random-img">
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-info">
+                <div class="about">
+                    <h3>Ссылки</h3>
+                    <ul>
+                        <li><a href="" target="">Правила</a></li>
+                        <li><a href="" target="">Условия соглашения</a></li>
+                        <li><a href="" target="">Новости</a></li>
+                        <li><a href="" target="">Партнеры</a></li>
+                        </гl>
+                </div>
+
+                <div class="social">
+                    <h3>Социальные сети</h3>
+                    <ul>
+                        <li><a href="https://github.com/Roman214-go" target="">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/grytskevich_roman/" target="">Instagram</a></li>
+                        <li><a href="https://vk.com/gandzhaa" target="">Вконтакте</a></li>
+                        <li><a href="https://web.telegram.org/" target="">Telegram</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact">
+                    <h3>Контакты</h2>
+                        <ul>
+                            <li>В ковид без контактов</li>
+                        </ul>
+                </div>
+
+                <div class="best-project">
+                    <h3>Понравился ли вам мой проект?</h3>
+                    <div class="still-best-project">
+                        <button class="btn-yes">Да</button>
+                        <button class="btn-gl">нет</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-end">
+                <p>Все права не защищены ©</p>
+            </div>
+        </footer>
+
+    </div> 
+    <script src="./src/index.js"></script>
+    <script type="module" src="./src/api.js"></script>
+    <script type="module" src="./src/music.js"></script>
+</body>
+
+</html>

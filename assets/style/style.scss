@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@200&family=Open+Sans:wght@300&family=Quintessential&family=Raleway:wght@200&family=Roboto:wght@100;400&family=Supermercado+One&display=swap");
+
+@mixin links {
+  text-decoration: none;
+  color: white;
+}
+@mixin playlists {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4% 0;
+  gap: 5%;
+}
+
+$bg_light_header: red;
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100%;
+  transition: opacity 5s ease-in;
+  color: white;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 1%;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.397);
+  background-color: rgba(0, 0, 0, 0.9);
+
+  h1,
+  .logo,
+  .burger-menu {
+    margin: auto;
+  }
+
+  .burger-container.burger-active :last-child {
+    transform: translateY(-15px) rotate(900deg);
+  }
+  .burger-container.burger-active :first-child {
+    transform: translateY(25px) rotate(900deg);
+  }
+
+  .burger-menu {
+    nav {
+      margin-top: 12vh;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 3%;
+      left: 90%;
+      transition: all 1s ease-in;
+      z-index: 3;
+      a {
+        @include links;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .burger-menu img {
+    padding-top: 5px;
+    transition: transform 1s ease-out;
+  }
+}
+
+.main {
+  padding-right: 12%;
+  flex: 1 1 auto;
+  width: 100%;
+  z-index: 0;
+  padding: 5% 0 0 5%;
+  background-color: rgba(0, 0, 0, 0.9);
+  .track-list-cont {
+    position: fixed;
+    top: 25%;
+    padding: 0 0 0 5%;
+    margin-left: 70%;
+    z-index: 1;
+    li {
+      padding-top: 1.5%;
+    }
+  }
+  .introdaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4% 0;
+    margin-right: 30%;
+    gap: 2em;
+    .introdaction-cont {
+      text-align: center;
+    }
+
+    .random-image-cont {
+      width: 70%;
+      height: 30em;
+
+      img {
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        box-shadow: 6px 6px 15px black;
+        transition: all 1s ease-in;
+        animation-name: random-img-opacity;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+
+        @keyframes random-img-opacity {
+          5% {
+            opacity: 0;
+          }
+          20% {
+            opacity: 1;
+          }
+          95% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  .music-playlists {
+    margin: 5% 30% 0 0;
+    .playlists-rock-cont {
+      @include playlists;
+      .playlist {
+        width: 21.2%;
+        .album-cover {
+          transition: all 0.5s ease-out;
+          margin-bottom: 6%;
+        }
+        .album-cover:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .playlists-rap-cont {
+      @include playlists();
+      .playlist {
+        max-width: 21.2%;
+        .album-cover {
+          transition: all 0.5s ease-out;
+          margin-bottom: 6%;
+        }
+
+        .album-cover:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: rgb(12, 15, 12);
+  color: rgb(151, 148, 148);
+  max-width: 100%;
+  border-top: 1px solid rgba(160, 160, 160, 0.397);
+  z-index: 2;
+  .footer-info {
+    margin: 2% 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap;
+    .best-project {
+      .still-best-project {
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        margin-top: 5%;
+        .btn-yes {
+          border-radius: 20px;
+          background-image: linear-gradient(
+            to right,
+            #1cec14 0%,
+            #00f552 51%,
+            #2ad632c2 100%
+          );
+          letter-spacing: 2px;
+          letter-spacing: 2px;
+
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          width: 3.5em;
+        }
+        .btn-gl {
+          background-color: red;
+        }
+      }
+    }
+    ul {
+      max-height: 5em;
+      width: 12.5em;
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 2em;
+      li {
+        margin: 3% 0 0 0;
+        a {
+          @include links;
+          color: rgb(151, 148, 148);
+          font-size: 14px;
+        }
+        a:hover {
+          color: rgb(133, 11, 11);
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .footer-end {
+    font-size: 12px;
+    text-align: center;
+    margin: 2% 0;
+  }
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #000000;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 7.8s opacity;
+}
+
+.loaded .preloader {
+  display: none;
+}
