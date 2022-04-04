@@ -18,7 +18,6 @@ let interval = setInterval(() => {
         numOfRapPlaylist++
     }   
 }, 2000)
-// Добавляем альбомы, обращаясь к функциям в api.js
 
 document.querySelector('.playlists-rock-cont').addEventListener('click', (event) => {
     let target = event.target
@@ -32,7 +31,6 @@ document.querySelector('.playlists-rock-cont').addEventListener('click', (event)
 
     });
 })
-// Добавляем альбомы в другой блок, обращаясь к функциям в api.js
 
 document.querySelector('.playlists-rap-cont').addEventListener('click', (event) => {
     let target = event.target
@@ -45,4 +43,3 @@ document.querySelector('.playlists-rap-cont').addEventListener('click', (event) 
         track.innerHTML = albumList 
     });
 })
-// На клик названия альбома показывает список его песен

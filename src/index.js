@@ -22,7 +22,7 @@ burgerButton.addEventListener('click', () => {
                 }, 0)
         }
 })
-function createNavTmpl() {
+function createNavigationTemplate() {
         const nav = document.createElement('nav')
         nav.style.opacity = '0'
         nav.innerHTML = `
@@ -32,7 +32,6 @@ function createNavTmpl() {
         `
         return nav
 }
-// Бургер-меню
 
 setInterval(() => {
         fetch('https://api.imgflip.com/get_memes')
@@ -40,7 +39,6 @@ setInterval(() => {
         .then(data => { 
                 document.querySelector('.random-image-cont').innerHTML = `<img src="${data.data.memes[(Math.random() * 100 + 1).toFixed(0)].url}" alt='random-img'>`})
 }, 8000)
-// Рандомная картинка в низе сайта, получаемая с сервера
 
 agreeButton.addEventListener('click', () => {
         document.querySelector('.still-best-project').innerHTML = '<p>Спасибо))</p>'
@@ -49,7 +47,6 @@ agreeButton.addEventListener('click', () => {
 disagreeButton.addEventListener('click', () => {
         disagreeButton.style.transform = `translate(${Math.random() * (25 - (-25)) + (25)}px, ${Math.random() * (25 - (-25)) + (-25)}px)`;
 })
-// Конпки понравился ли проект
 
 window.onload = function () {
         document.body.classList.add('loaded_hiding');
@@ -58,5 +55,4 @@ window.onload = function () {
           document.body.classList.remove('loaded_hiding');
         }, 7800);
       }
-// Загрузочный экран
 
